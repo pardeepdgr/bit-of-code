@@ -3,6 +3,10 @@ package iterator;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Provides a way to access the elements of an aggregate object 
+ * without exposing its underlying representation
+ */
 public class UsageSpecification {
 
 	public List<CharacteristicSpecification> columns;
