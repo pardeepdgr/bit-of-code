@@ -1,57 +1,59 @@
-
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
+import java.util.Map.Entry;
 
 public class MapSortByValue {
 
-	static void customSort(int[] arr) {
+	public static void main(String[] args) {
+		Map<Integer, String> unsortedMap = getUnsortedMap();
+		printMap(unsortedMap, "Unsorted");
 
-		Map<Integer, Integer> map = new TreeMap<Integer, Integer>();
+		List<Entry<Integer, String>> mapEntryList = new ArrayList<Entry<Integer, String>>(
+				unsortedMap.entrySet());
+		Collections.sort(mapEntryList,
+				new Comparator<Entry<Integer, String>>() {
+					public int compare(Entry<Integer, String> o1,
+							Entry<Integer, String> o2) {
+						return (o1.getValue().compareTo(o2.getValue()));
+					}
+				});
 
-		for (int val : arr) {
-			Integer existingVal = map.get(val);
-			if (null != existingVal) {
-				map.put(val, ++existingVal);
-			} else {
-				map.put(val, 1);
-			}
-		}
-
-		List<Map.Entry<Integer, Integer>> list = sortByValue(map);
-		sortedArray(arr, list);
-
-		for (int i = 0; i < arr.length; i++) {
-			System.out.println(arr[i]);
-		}
+		Map<Integer, String> sortedMap = getSortedMap(mapEntryList);
+		printMap(sortedMap, "Sorted");
 	}
 
-	public static List<Map.Entry<Integer, Integer>> sortByValue(
-			Map<Integer, Integer> frequencyMap) {
-
-		List<Map.Entry<Integer, Integer>> list = new ArrayList<Map.Entry<Integer, Integer>>(
-				frequencyMap.entrySet());
-		Collections.sort(list, new Comparator<Map.Entry<Integer, Integer>>() {
-			public int compare(Map.Entry<Integer, Integer> o1,
-					Map.Entry<Integer, Integer> o2) {
-				return o1.getValue().compareTo(o2.getValue());
-			}
-		});
-
-		return list;
+	private static Map<Integer, String> getUnsortedMap() {
+		Map<Integer, String> unsortedMap = new HashMap<Integer, String>();
+		unsortedMap.put(45, "Z");
+		unsortedMap.put(1, "a");
+		unsortedMap.put(10, "C");
+		unsortedMap.put(67, "P");
+		unsortedMap.put(89, "M");
+		unsortedMap.put(4, "t");
+		unsortedMap.put(33, "s");
+		unsortedMap.put(13, "g");
+		unsortedMap.put(73, "q");
+		unsortedMap.put(99, "l");
+		return unsortedMap;
 	}
 
-	private static void sortedArray(int[] array,
-			List<Map.Entry<Integer, Integer>> list) {
-		int index = 0;
-		for (Map.Entry<Integer, Integer> entry : list) {
-			for (int i = 0; i < entry.getValue(); i++) {
-				array[index++] = entry.getKey();
-			}
-		}
+	private static Map<Integer, String> getSortedMap(
+			List<Entry<Integer, String>> mapEntryList) {
+		Map<Integer, String> sortedMap = new LinkedHashMap<Integer, String>();
+		for (Entry<Integer, String> entry : mapEntryList)
+			sortedMap.put(entry.getKey(), entry.getValue());
+		return sortedMap;
 	}
+
+	private static void printMap(Map<Integer, String> map, String status) {
+		System.out.println(status + " Map: ");
+		System.out.println(map);
+		System.out.println();
+	}
+
 }
