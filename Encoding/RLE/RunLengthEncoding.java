@@ -1,6 +1,6 @@
-package run_length_encoding;
+package RLE;
 
-public class RLE {
+public class RunLengthEncoding {
 
 	public String runLengthEncoding(String text) {
 		String encodedString = "";
