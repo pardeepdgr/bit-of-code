@@ -35,9 +35,9 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--mockito-all will have mockito-core, hamcrest and objenesis in a single 
-			binary so if you wanted to use new and improved, of hamcrest, you wouldn't 
-			be able to with the this so it is discouraged to use mockito-all -->
+		<!--mockito-all will have mockito-core, hamcrest and objenesis in a single binary 
+		 	so if you wanted to use improved and new version of hamcrest etc., you 
+			wouldn't be able to with this, so it is discouraged to use mockito-all -->
 		<!-- <dependency>
 				<groupId>org.mockito</groupId>
 				<artifactId>mockito-all</artifactId> 
