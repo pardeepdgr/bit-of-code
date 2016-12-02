@@ -4,7 +4,7 @@ package rabin_karp;
  * Runtime complexity - O(m * n), in worst case O(m * m) (depends on hash function)
  * Space complexity - O(1)
  *
- * It is very useful when there are more than one pattern to match in a given text
+ * It is very useful when there are more than one patterns required to be found in a given text
  */
 public class RabinKarpSubstringSearch {
 
