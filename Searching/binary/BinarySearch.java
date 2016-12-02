@@ -1,7 +1,7 @@
 package binary;
 
 /**
- * Binary search has O(logn) time complexity
+ * Binary search has O(logn) Runtime complexity
  */
 public class BinarySearch {
 
