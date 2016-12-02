@@ -1,9 +1,10 @@
 package rabin_karp;
 
 /**
- * time complexity O(m*n)
- * 
- * RK is very useful when there are more than one pattern to match
+ * Runtime complexity - O(m * n), in worst case O(m * m) (depends on hash function)
+ * Space complexity - O(1)
+ *
+ * It is very useful when there are more than one pattern to match in a given text
  */
 public class RabinKarpSubstringSearch {
 
