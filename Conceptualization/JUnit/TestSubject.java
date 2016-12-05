@@ -29,8 +29,8 @@ public class TestSubject {
 
 	@Test
 	public void mockingFinalMethod_UsingMockito() {
-		Mockito.when(subject.finalMethod()).thenReturn("powermock-final");
-		Assert.assertEquals("powermock-final", subject.finalMethod());
+		Mockito.when(subject.finalMethod()).thenReturn("mockito-final");
+		Assert.assertEquals("mockito-final", subject.finalMethod());
 	}
 
 	@Test
