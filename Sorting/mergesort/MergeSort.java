@@ -1,8 +1,10 @@
 package mergesort;
 
 /**
- * best/avg/worst case time complexity of O(nlogn), O(n) space complexity
- * step merges n elements which takes O(n) and O(logn) recursions
+ * runtime complexity:
+ * worst case O(nlogn), best case Ω(nlogn), average case θ(nlogn)
+ * step merges n elements which takes n and logn recursions
+ * space complexity: O(n) 
  * 
  * performs less comparisons than quick sort both worst case and on average, if
  * performing a comparison is costly choose merge sort
