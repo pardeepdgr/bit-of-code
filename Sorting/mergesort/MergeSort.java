@@ -3,7 +3,7 @@ package mergesort;
 /**
  * runtime complexity:
  * worst case O(nlogn), best case Ω(nlogn), average case θ(nlogn)
- * step merges n elements which takes n and logn recursions
+ * for n elements, merge is done n times and recursions is done logn times
  * space complexity: O(n) 
  * 
  * performs less comparisons than quick sort both worst case and on average, if
