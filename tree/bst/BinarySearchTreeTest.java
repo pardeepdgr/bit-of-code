@@ -36,11 +36,6 @@ public class BinarySearchTreeTest {
 		tree.add(120);
 	}
 
-	@Test(expected = UnsupportedOperationException.class)
-	public void testUnsupportedBinaryTree_AddOperation() {
-		tree.add(120, 150, "right");
-	}
-
 	@Test
 	public void findNode_WhenItExistInTree() {
 		assertEquals(97, tree.find(97).getData());

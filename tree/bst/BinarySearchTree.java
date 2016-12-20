@@ -13,10 +13,6 @@ public class BinarySearchTree {
 		root = new Node(rootData);
 	}
 
-	public void add(int parent, int child, String orientation) {
-		throw new UnsupportedOperationException();
-	}
-
 	public void add(int data) {
 		Node currentNode = root;
 		Node node = new Node(data);
