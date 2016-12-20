@@ -41,7 +41,7 @@ public class BinaryTreeTest {
 
 	@Test
 	public void findNode_WhenItExistInTree() {
-		assertEquals(new Node(27), tree.find(27));
+		assertEquals(27, tree.find(27).getData());
 	}
 
 	@Test
