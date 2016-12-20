@@ -23,7 +23,7 @@ public class BinaryTreeTest {
 	}
 
 	private static void plantBinaryTree() {
-		tree = new BinaryTree(new Node(15));
+		tree = new BinaryTree(15);
 		tree.add(15, 8, "left");
 		tree.add(15, 20, "right");
 		tree.add(8, 2, "left");

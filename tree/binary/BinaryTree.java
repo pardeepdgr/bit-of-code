@@ -11,8 +11,8 @@ import tree.Node;
 public class BinaryTree {
 	private Node root = null;
 
-	public BinaryTree(Node root) {
-		this.root = root;
+	public BinaryTree(int rootData) {
+		root = new Node(rootData);
 	}
 
 	public void add(int parent, int child, String orientation) {
