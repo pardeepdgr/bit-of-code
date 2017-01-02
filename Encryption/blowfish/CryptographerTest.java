@@ -19,8 +19,7 @@ public class CryptographerTest {
 		String inputFile = PATH.concat(FILENAME).concat(INPUT_EXTENSTION);
 		String outputFile = PATH.concat(FILENAME).concat(ENCRYPTION_EXTENSTION);
 		Cryptographer.encrypt(inputFile, outputFile);
-		assertTrue(new File(PATH.concat(FILENAME).concat(ENCRYPTION_EXTENSTION))
-				.exists());
+		assertTrue(new File(PATH.concat(FILENAME).concat(ENCRYPTION_EXTENSTION)).exists());
 	}
 
 	@Test
@@ -28,8 +27,6 @@ public class CryptographerTest {
 		String inputFile = PATH.concat(FILENAME).concat(ENCRYPTION_EXTENSTION);
 		String outputFile = PATH.concat(FILENAME).concat(DECRYPTION_EXTENSTION);
 		Cryptographer.decrypt(inputFile, outputFile);
-		assertTrue(new File(PATH.concat(FILENAME).concat(DECRYPTION_EXTENSTION))
-				.exists());
+		assertTrue(new File(PATH.concat(FILENAME).concat(DECRYPTION_EXTENSTION)).exists());
 	}
-
 }
