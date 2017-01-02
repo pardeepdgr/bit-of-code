@@ -58,8 +58,7 @@ public class Cryptographer {
 		try {
 			cipher = Cipher.getInstance(CIPHER_INSTANCE);
 			cipher.init(opmode, secretKeySpec);
-		} catch (NoSuchAlgorithmException | NoSuchPaddingException
-				| InvalidKeyException e) {
+		} catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException e) {
 			e.printStackTrace();
 		}
 		return cipher;
