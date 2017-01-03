@@ -14,6 +14,10 @@ public class Subject {
 		return "final";
 	}
 
+	public static void voidStaticMethod() {
+		System.out.println("Inside void-static method");
+	}
+	
 	public static String staticMethod() {
 		System.out.println("Inside static method");
 		return "static";
