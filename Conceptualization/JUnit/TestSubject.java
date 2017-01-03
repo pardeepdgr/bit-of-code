@@ -17,8 +17,7 @@ public class TestSubject {
 
 	@Test
 	public void mockingConstrucotr_UsingPowerMock() throws Exception {
-		PowerMockito.whenNew(Subject.class).withNoArguments()
-				.thenReturn(subject);
+		PowerMockito.whenNew(Subject.class).withNoArguments().thenReturn(subject);
 	}
 
 	@Test
@@ -36,8 +35,10 @@ public class TestSubject {
 	@Test
 	public void mockingStaticMethod_UsingPowerMock() {
 		PowerMockito.mockStatic(Subject.class);
-		PowerMockito.when(Subject.staticMethod())
-				.thenReturn("powermock-static");
+		
+		PowerMockito.doNothing().when(Subject.class, "voidStaticMethod", Mockito.anyString());
+		
+		PowerMockito.when(Subject.staticMethod()).thenReturn("powermock-static");
 		Assert.assertEquals("powermock-static", Subject.staticMethod());
 	}
 
