@@ -1,7 +1,14 @@
 public class Subject {
 
+	String value;
+	
 	public Subject() {
 		System.out.println("Inside constructor");
+	}
+	
+	public Subject(String arg) {
+		value = arg;
+		System.out.println("Inside parameterized constructor");
 	}
 
 	public String instanceMethod() {
