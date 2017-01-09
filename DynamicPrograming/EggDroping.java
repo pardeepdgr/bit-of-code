@@ -6,10 +6,15 @@ public class EggDroping {
 	public static void main(String[] args) {
 		EggDroping eggDroppingProblem = new EggDroping();
 
-		int attempts = eggDroppingProblem.calculateMinNumberOfAttempts(NUMBER_OF_EGGS, NUMBER_OF_FLOORS);
+		int attempts = eggDroppingProblem.calculateMinNumberOfAttempts(
+				NUMBER_OF_EGGS, NUMBER_OF_FLOORS);
 
-		System.out.println("When " + NUMBER_OF_EGGS + " eggs will be dropped from a building of " + NUMBER_OF_FLOORS + " floors.");
-		System.out.println("Minimum number of attempts to find out from what floor eggs will start breaking is " + attempts + ".");
+		System.out.println("When " + NUMBER_OF_EGGS
+				+ " eggs will be dropped from a building of "
+				+ NUMBER_OF_FLOORS + " floors.");
+		System.out
+				.println("Minimum number of attempts to find out from what floor eggs will start breaking is "
+						+ attempts + ".");
 	}
 
 	private int calculateMinNumberOfAttempts(int eggs, int floors) {
@@ -25,15 +30,17 @@ public class EggDroping {
 				matrix[numberOfEggs][numberOfFloors] = NUMBER_OF_FLOORS;
 
 				for (int currentFloor = 1; currentFloor <= numberOfFloors; currentFloor++) {
-					attempts = 1 + Math.max(matrix[numberOfEggs - 1][currentFloor - 1], matrix[numberOfEggs][numberOfFloors - currentFloor]);
-					System.out.print(" "+attempts);
+					attempts = 1 + Math
+							.max(matrix[numberOfEggs - 1][currentFloor - 1],
+									matrix[numberOfEggs][numberOfFloors
+											- currentFloor]);
+
 					if (attempts < matrix[numberOfEggs][numberOfFloors])
 						matrix[numberOfEggs][numberOfFloors] = attempts;
 				}
-				System.out.println();
 			}
 		}
 		return matrix[eggs][floors];
 	}
-	
+
 }
