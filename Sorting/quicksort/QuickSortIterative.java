@@ -1,14 +1,13 @@
 package quicksort;
 
 /**
- * average or best case time complexity O(nlogn) 
- * O(n) because (n-1) comparison and O(logn) because list will be divided logn times
+ * runtime complexity:
+ * worst case O(n*n), if in each case pivot is chosen either largest or smallest
+ * best case Ω(nlogn), average case θ(nlogn)
+ * n because (n-1) comparison and logn because list will be divided logn times
  * 
- * worst case time complexity O(n*n) 
- * if in each case pivot is chosen either largest or smallest number
- * 
- * fasted sort on average do comparison in-place so no extra space (O(logn) in worst case) 
- * which cause less time because no exchange of element in between
+ * fasted sort on average do comparison in-place so no extra space
+ * which cause less time as no exchange of element in between
  */
 public class QuickSortIterative {
 
