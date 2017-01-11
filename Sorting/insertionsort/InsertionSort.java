@@ -1,16 +1,16 @@
 package insertionsort;
 
 /**
- * algorithm of choice either when the data is sorted or nearly sorted[1]
+ * runtime complexity:
+ * best case Ω(n), when list is already sorted
+ * average case θ(n*n), worst case O(n*n)
+ * 
+ * Algorithm of choice either when the data is sorted or nearly sorted[1]
  * or when the problem size is small (because it has low overhead[2]) 
  * 
- * [1]while inserting elements into the sorted portion only a single comparison required
- * [2]low overhead because of shorter code, less memory consumption and avoiding recursion
- *    higher overhead in divide-and-conquer sorting algorithms, such as merge/quick sort
- * 
- * best case time complexity O(n) when list is already sorted
- * 
- * average or worst case time complexity O(n*n)
+ * [1] while inserting elements into the sorted portion only a single comparison required
+ * [2] low overhead because of shorter code, less memory consumption and avoiding recursion
+ *     higher overhead in divide-and-conquer sorting algorithms, such as merge/quick sort
  */
 public class InsertionSort {
 
