@@ -11,6 +11,9 @@ package insertionsort;
  * [1] while inserting elements into the sorted portion only a single comparison required
  * [2] low overhead because of shorter code, less memory consumption and avoiding recursion
  *     higher overhead in divide-and-conquer sorting algorithms, such as merge/quick sort
+ *
+ * https://www.toptal.com/developers/sorting-algorithms
+ * http://sorting.at/
  */
 public class InsertionSort {
 
