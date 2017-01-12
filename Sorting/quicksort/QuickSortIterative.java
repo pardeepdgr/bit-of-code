@@ -8,6 +8,9 @@ package quicksort;
  * 
  * fasted sort on average do comparison in-place so no extra space
  * which cause less time as no exchange of element in between
+ *
+ * https://www.toptal.com/developers/sorting-algorithms
+ * http://sorting.at/
  */
 public class QuickSortIterative {
 
