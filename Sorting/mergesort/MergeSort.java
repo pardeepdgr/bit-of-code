@@ -4,12 +4,14 @@ package mergesort;
  * runtime complexity:
  * worst case O(nlogn), best case Ω(nlogn), average case θ(nlogn)
  * for n elements, merge is done n times and recursions is done logn times
- * space complexity: O(n) 
+ * space complexity: 
+ * for arrays O(n) while for linked lists requires constant space
  * 
  * Performs less comparisons than quick sort both worst case and on average, if
  * performing a comparison is costly choose merge sort
  * 
  * https://www.toptal.com/developers/sorting-algorithms
+ * http://sorting.at/
  */
 public class MergeSort {
 
