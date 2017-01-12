@@ -6,8 +6,10 @@ package mergesort;
  * for n elements, merge is done n times and recursions is done logn times
  * space complexity: O(n) 
  * 
- * performs less comparisons than quick sort both worst case and on average, if
+ * Performs less comparisons than quick sort both worst case and on average, if
  * performing a comparison is costly choose merge sort
+ * 
+ * https://www.toptal.com/developers/sorting-algorithms
  */
 public class MergeSort {
 
