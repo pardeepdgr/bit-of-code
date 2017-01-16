@@ -39,7 +39,9 @@ public class Configuration {
 		return properties.getProperty(key);
 	}
 	
-	/* to deal with Serialization */
+	/*
+	 * to deal with Serialization, ANY-ACCESS-MODIFIER can be used
+	 */
 	private Object readResolve() {
 		return config;
 	}
