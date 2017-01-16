@@ -38,4 +38,9 @@ public class Configuration {
 	public String getConfiguration(String key) {
 		return properties.getProperty(key);
 	}
+	
+	/* to deal with Serialization */
+	private Object readResolve() {
+		return config;
+	}
 }
