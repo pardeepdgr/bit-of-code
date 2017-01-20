@@ -3,52 +3,51 @@ package evenodd_printer;
 public class EvenOddNumberPrinter implements Runnable {
 
 	private int range;
-	private boolean isThreadEven;
+	private boolean isEvenThread;
 	private EvenOddNumberPrinter printer;
 	
-	private boolean isNumberOdd = false;
+	private boolean isEvenNumber = false;
 
 	public EvenOddNumberPrinter() {
 	}
 
-	public EvenOddNumberPrinter(EvenOddNumberPrinter printer, int range,
-			boolean isThreadEven) {
+	public EvenOddNumberPrinter(EvenOddNumberPrinter printer, int range, boolean isEvenThread) {
 		this.printer = printer;
 		this.range = range;
-		this.isThreadEven = isThreadEven;
+		this.isEvenThread = isEvenThread;
 	}
 	
 	public synchronized void printEvenNumber(int number) {
-		while (isNumberOdd == false) {
+		while (isEvenNumber == false) {
 			try {
 				wait();
 			} catch (InterruptedException e) {
 			}
 		}
 		System.out.println("Even: " + number);
-		isNumberOdd = false;
+		isEvenNumber = false;
 		notifyAll();
 
 	}
 
 	public synchronized void printOddNumber(int number) {
-		while (isNumberOdd == true) {
+		while (isEvenNumber == true) {
 			try {
 				wait();
 			} catch (InterruptedException e) {
 			}
 		}
 		System.out.println("Odd: " + number);
-		isNumberOdd = true;
+		isEvenNumber = true;
 		notifyAll();
 	}
 
 	@Override
 	public void run() {
-		int number = isThreadEven == true ? 2 : 1;
+		int number = isEvenThread == true ? 2 : 1;
 		
 		while (number <= range) {
-			if (isThreadEven == true) {
+			if (isEvenThread == true) {
 				printer.printEvenNumber(number);
 			} else {
 				printer.printOddNumber(number);
