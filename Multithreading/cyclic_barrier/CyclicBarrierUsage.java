@@ -25,8 +25,7 @@ public class CyclicBarrierUsage {
 		t1.start();
 		t2.start();
 
-		System.out
-				.println("Job-0 is completed. Waiting at barrier for other parties..");
+		System.out.println("Job-0 is completed. Waiting at barrier for other parties..");
 		try {
 			barrier.await();
 		} catch (InterruptedException | BrokenBarrierException e) {
@@ -54,8 +53,7 @@ class PrimaryParty implements Runnable {
 			e.printStackTrace();
 		}
 
-		System.out
-				.println("Job-1 is completed. Waiting at barrier for other parties..");
+		System.out.println("Job-1 is completed. Waiting at barrier for other parties..");
 
 		try {
 			barrier.await();
