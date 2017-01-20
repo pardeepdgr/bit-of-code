@@ -30,18 +30,18 @@ public class DoublyLinkedList {
 	public Node addNode(int pageNumber) {
 		Node node = new Node(pageNumber);
 		if (head == null) {
-			createHeadNode(node);
+			createHeader(node);
 			return node;
 		} else if (currentSize < size)
 			currentSize++;
 		else
-			deleteNodeAtTail();
+			deleteTailNode();
 
 		addNodeAtHead(node);
 		return node;
 	}
 
-	private void createHeadNode(Node node) {
+	private void createHeader(Node node) {
 		head = node;
 		tail = head;
 		currentSize++;
@@ -53,7 +53,7 @@ public class DoublyLinkedList {
 		head = node;
 	}
 
-	private void deleteNodeAtTail() {
+	private void deleteTailNode() {
 		tail = tail.getPrevious();
 		tail.setNext(null);
 	}
@@ -64,11 +64,11 @@ public class DoublyLinkedList {
 		if (node == tail)
 			deleteNodeAtTail();
 
-		createLinkBetweenPreviousAndNextNode(node);
+		linkPreviousAndNextNode(node);
 		moveNodeToBegining(node);
 	}
 
-	private void createLinkBetweenPreviousAndNextNode(Node node) {
+	private void linkPreviousAndNextNode(Node node) {
 		Node previous = node.getPrevious();
 		Node next = node.getNext();
 		previous.setNext(next);
