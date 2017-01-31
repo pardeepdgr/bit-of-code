@@ -108,11 +108,11 @@ public class BinarySearchTree {
 	}
 
 	private boolean hasOnlyRightChild(Node node) {
-		return node.getLeft() == null;
+		return node.getLeft() == null && node.getRight() != null;
 	}
 
 	private boolean hasOnlyLeftChild(Node node) {
-		return node.getRight() == null;
+		return node.getLeft() != null && node.getRight() == null;
 	}
 
 	public Node find(int data) {
