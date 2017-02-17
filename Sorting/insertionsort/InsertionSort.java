@@ -6,7 +6,8 @@ package insertionsort;
  * average case θ(n*n), worst case O(n*n)
  * 
  * Algorithm of choice either when the data is sorted or nearly sorted[1]
- * or when the problem size is small (because it has low overhead[2]) 
+ * or when the problem size is small (because it has low overhead[2])
+ * or there is few unique data and no extra space required (Merge)
  * 
  * [1] while inserting elements into the sorted portion only a single comparison required
  * [2] low overhead because of shorter code, less memory consumption and avoiding recursion
