@@ -34,22 +34,7 @@ public class Stack<T> {
 	public void print() {
 		for (int i = backedArray.length - 1; i >= 0; i--)
 			System.out.println(backedArray[i]);
-		System.out.println("-----");
-	}
-
-	public static Stack<Integer> getDummyStackOfSize10() {
-		Stack<Integer> stack = new Stack<Integer>(10);
-		stack.push(1);
-		stack.push(2);
-		stack.push(3);
-		stack.push(4);
-		stack.push(5);
-		stack.push(6);
-		stack.push(7);
-		stack.push(8);
-		stack.push(9);
-		stack.push(10);
-		return stack;
+		System.out.println();
 	}
 }
 
