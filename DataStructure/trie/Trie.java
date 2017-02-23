@@ -9,10 +9,7 @@ public class Trie {
 		root = new TrieNode();
 	}
 
-	/*
-	 * runtime complexity: O(l*n), where l is average length of words and n is
-	 * number of words
-	 */
+	/* runtime complexity: O(l*n), where l is average length of words and n is number of words */
 	public void insert(String word) {
 		TrieNode current = root;
 		int length = word.length();
@@ -52,10 +49,7 @@ public class Trie {
 		delete(root, word, 0);
 	}
 
-	/*
-	 * runtime complexity: O(l*n), where l is average length of words and n is
-	 * number of words
-	 */
+	/* runtime complexity: O(l*n), where l is average length of words and n is number of words */
 	private boolean delete(TrieNode current, String word, int index) {
 		if (index == word.length()) {
 			if (!current.isEndOfWord())
@@ -74,27 +68,4 @@ public class Trie {
 		}
 		return false;
 	}
-
-	public void print() {
-		print(root);
-
-	}
-
-	private String print(TrieNode current) {
-		String word = "";
-
-		for (Entry<Character, TrieNode> entry : current.getChildren().entrySet()) {
-			char character = entry.getKey();
-			word = String.valueOf(character);
-			TrieNode node = current.getChildren().get(character);
-			if (node == null)
-				return "";
-			if (!"".equals(print(node)))
-				word += print(node);
-			else
-				System.out.println(word);
-		}
-		return word;
-	}
-	
 }
