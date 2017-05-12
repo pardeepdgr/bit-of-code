@@ -158,9 +158,9 @@ public class BinaryTree {
 	private int diameter(Node node) {
 		if (node == null)
 			return 0;
+		
 		int lHeight = height(node.getLeft());
 		int rHeight = height(node.getRight());
-
 		int lDiameter = diameter(node.getLeft());
 		int rDiameter = diameter(node.getRight());
 		return Math.max((lHeight + rHeight + 1), Math.max(lDiameter, rDiameter));
