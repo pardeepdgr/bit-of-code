@@ -64,6 +64,16 @@ public class BinaryTreeTest {
 		assertEquals(tree.postorderTraversal(), getTraversalOrder(POSTORDER));
 	}
 
+	@Test
+	public void testHeightOfTree() {
+		assertEquals(4, tree.height());
+	}
+	
+	@Test
+	public void testDiameterOfTree() {
+		assertEquals(8, tree.diameter());
+	}
+
 	private List<Node> getTraversalOrder(String traversalOrder) {
 		System.out.println();
 		List<Node> nodes = new ArrayList<Node>();

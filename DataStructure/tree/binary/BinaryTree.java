@@ -141,4 +141,28 @@ public class BinaryTree {
 		return nodes;
 	}
 
+	public int height() {
+		return height(root) - 1;
+	}
+
+	private int height(Node node) {
+		if (node == null)
+			return 0;
+		return 1 + Math.max(height(node.getLeft()), height(node.getRight()));
+	}
+
+	public int diameter() {
+		return diameter(root);
+	}
+
+	private int diameter(Node node) {
+		if (node == null)
+			return 0;
+		int lHeight = height(node.getLeft());
+		int rHeight = height(node.getRight());
+
+		int lDiameter = diameter(node.getLeft());
+		int rDiameter = diameter(node.getRight());
+		return Math.max((lHeight + rHeight + 1), Math.max(lDiameter, rDiameter));
+	}
 }
