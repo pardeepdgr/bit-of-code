@@ -1,6 +1,7 @@
 package tree.binary;
 
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -136,6 +137,40 @@ public class BinaryTree {
 					}
 					root = stack.empty() ? null : stack.peek().getRight();
 				}
+			}
+		}
+		return nodes;
+	}
+
+	public List<Node> spiralOrderTraversal() {
+		List<Node> nodes = new ArrayList<Node>();
+		Deque<Node> deque = new LinkedList<Node>();
+
+		Node node = null;
+		Node separator = null;
+		deque.offer(separator);
+		deque.offerFirst(root);
+
+		while (deque.size() > 1) {
+
+			while (deque.peekFirst() != separator) {
+				node = deque.pollFirst();
+				if (node.getLeft() != null)
+					deque.offerLast(node.getLeft());
+				if (node.getRight() != null)
+					deque.offerLast(node.getRight());
+				System.out.print(node.getData() + " ");
+				nodes.add(node);
+			}
+
+			while (deque.peekLast() != separator) {
+				node = deque.pollLast();
+				if (node.getRight() != null)
+					deque.offerFirst(node.getRight());
+				if (node.getLeft() != null)
+					deque.offerFirst(node.getLeft());
+				System.out.print(node.getData() + " ");
+				nodes.add(node);
 			}
 		}
 		return nodes;

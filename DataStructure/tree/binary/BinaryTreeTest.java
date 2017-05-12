@@ -14,6 +14,7 @@ public class BinaryTreeTest {
 	private static final String PREORDER = "15 8 2 6 3 7 11 10 12 14 20 27 22 30";
 	private static final String INORDER = "2 3 6 7 8 10 11 12 14 15 20 22 27 30";
 	private static final String POSTORDER = "3 7 6 2 10 14 12 11 8 22 30 27 20 15";
+	private static final String SPIRALORDER = "15 20 8 2 11 27 30 22 12 10 6 3 7 14";
 
 	private static BinaryTree tree = null;
 
@@ -51,17 +52,22 @@ public class BinaryTreeTest {
 
 	@Test
 	public void testPreorderTraversal() {
-		assertEquals(tree.preorderTraversal(), getTraversalOrder(PREORDER));
+		assertEquals(getTraversalOrder(PREORDER), tree.preorderTraversal());
 	}
 
 	@Test
 	public void testInorderTraversal() {
-		assertEquals(tree.inorderTraversal(), getTraversalOrder(INORDER));
+		assertEquals(getTraversalOrder(INORDER), tree.inorderTraversal());
 	}
 
 	@Test
 	public void testPostorderTraversal() {
-		assertEquals(tree.postorderTraversal(), getTraversalOrder(POSTORDER));
+		assertEquals(getTraversalOrder(POSTORDER), tree.postorderTraversal());
+	}
+
+	@Test
+	public void testSpiralOrderTraversal() {
+		assertEquals(getTraversalOrder(SPIRALORDER), tree.spiralOrderTraversal());
 	}
 
 	@Test
