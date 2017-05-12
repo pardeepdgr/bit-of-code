@@ -74,10 +74,15 @@ public class BinaryTreeTest {
 	public void testHeightOfTree() {
 		assertEquals(4, tree.height());
 	}
-	
+
 	@Test
 	public void testDiameterOfTree() {
 		assertEquals(8, tree.diameter());
+	}
+
+	@Test
+	public void testIfTreeIsBST() {
+		assertTrue(Trees.isBinarySearchTree(tree.getRoot()));
 	}
 
 	private List<Node> getTraversalOrder(String traversalOrder) {

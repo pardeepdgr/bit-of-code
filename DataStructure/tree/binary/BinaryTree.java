@@ -16,6 +16,10 @@ public class BinaryTree {
 		root = new Node(rootData);
 	}
 
+	public Node getRoot() {
+		return root;
+	}
+
 	public void add(int parent, int child, String orientation) {
 		Node parentNode = find(parent);
 		Node childNode = new Node(child);
@@ -25,14 +29,12 @@ public class BinaryTree {
 				if (parentNode.getLeft() == null)
 					parentNode.setLeft(childNode);
 				else
-					System.out.println(parentNode.getData()
-							+ " node already has left node");
+					System.out.println(parentNode.getData() + " node already has left node");
 			} else if ("right".equals(orientation)) {
 				if (parentNode.getRight() == null)
 					parentNode.setRight(childNode);
 				else
-					System.out.println(parentNode.getData()
-							+ " node already has right node");
+					System.out.println(parentNode.getData() + " node already has right node");
 			}
 		}
 	}
@@ -49,24 +51,24 @@ public class BinaryTree {
 	}
 
 	public List<Node> levelOrderTraversal() {
-		Node tempNode = new Node();
+		Node node = new Node();
 		Queue<Node> queue = new LinkedList<Node>();
 		List<Node> nodes = new ArrayList<Node>();
 
 		if (root != null) {
 			queue.offer(root);
 			while (!queue.isEmpty()) {
-				tempNode = queue.poll();
-				nodes.add(tempNode);
+				node = queue.poll();
+				nodes.add(node);
 				// System.out.print(tempNode.getData() + " ");
 
-				if (tempNode.getLeft() != null) {
-					queue.offer(tempNode.getLeft());
-					nodes.add(tempNode.getLeft());
+				if (node.getLeft() != null) {
+					queue.offer(node.getLeft());
+					nodes.add(node.getLeft());
 				}
-				if (tempNode.getRight() != null) {
-					queue.offer(tempNode.getRight());
-					nodes.add(tempNode.getLeft());
+				if (node.getRight() != null) {
+					queue.offer(node.getRight());
+					nodes.add(node.getLeft());
 				}
 			}
 		}
@@ -193,11 +195,12 @@ public class BinaryTree {
 	private int diameter(Node node) {
 		if (node == null)
 			return 0;
-		
 		int lHeight = height(node.getLeft());
 		int rHeight = height(node.getRight());
+
 		int lDiameter = diameter(node.getLeft());
 		int rDiameter = diameter(node.getRight());
 		return Math.max((lHeight + rHeight + 1), Math.max(lDiameter, rDiameter));
 	}
+
 }
