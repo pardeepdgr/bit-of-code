@@ -1,9 +1,8 @@
 package stack;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import org.junit.experimental.categories.Categories.ExcludeCategory;
 
 public class StackTest {
 
@@ -30,5 +29,21 @@ public class StackTest {
 	@Test(expected = StackUnderflow.class)
 	public void underflowStack() {
 		stack.pop();
+	}
+
+	@Test
+	public void sortStack() {
+		stack.push(1);
+		stack.push(41);
+		stack.push(12);
+		stack.push(25);
+		stack.push(19);
+		stack.sort();
+
+		assertEquals(new Integer(41), stack.pop());
+		assertEquals(new Integer(25), stack.pop());
+		assertEquals(new Integer(19), stack.pop());
+		assertEquals(new Integer(12), stack.pop());
+		assertEquals(new Integer(1), stack.pop());
 	}
 }
