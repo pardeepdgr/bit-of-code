@@ -1,10 +1,10 @@
 package command;
 
 /**
- * Command Design Pattern decouple consumer from producer
+ * Encapsulate a request as an object, thereby letting you parametrize clients with different requests, 
+ * queue or log requests, and support undoable operations. Command Design Pattern decouple consumer from producer.
  * 
- * Chain-of-responsibility forward request along a chain
- * while command pattern forward request to specific module
+ * Chain-of-responsibility forward request along a chain while command pattern forward request to specific module
  */
 import command.command.CloseFileCommand;
 import command.command.OpenFileCommand;
