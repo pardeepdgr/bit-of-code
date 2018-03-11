@@ -14,20 +14,6 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
 # Thumbnails
 ._*
 
@@ -38,6 +24,8 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+.DS_Store
+.idea
 
 # Directories potentially created on remote AFP share
 .AppleDB
