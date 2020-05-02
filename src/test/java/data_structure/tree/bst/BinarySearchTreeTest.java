@@ -1,15 +1,14 @@
 package data_structure.tree.bst;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import data_structure.tree.Node;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import tree.Node;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class BinarySearchTreeTest {
 

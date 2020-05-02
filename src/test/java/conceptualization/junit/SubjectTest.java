@@ -12,7 +12,7 @@ import org.powermock.reflect.internal.WhiteboxImpl;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(Subject.class)
-public class TestSubject {
+public class SubjectTest {
 
 	@Mock
 	private Subject subject;
@@ -40,8 +40,12 @@ public class TestSubject {
 	@Test
 	public void mockingStaticMethod_UsingPowerMock() {
 		PowerMockito.mockStatic(Subject.class);
-		/*void Static Method*/
-		PowerMockito.doNothing().when(Subject.class, "voidStaticMethod", Mockito.anyString());
+		try {
+			/*void Static Method*/
+			PowerMockito.doNothing().when(Subject.class, "voidStaticMethod", Mockito.anyString());
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 		/*Static Method with return type*/
 		PowerMockito.when(Subject.staticMethod()).thenReturn("powermock-static");
 		Assert.assertEquals("powermock-static", Subject.staticMethod());

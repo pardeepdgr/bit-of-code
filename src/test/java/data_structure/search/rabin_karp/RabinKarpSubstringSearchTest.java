@@ -1,4 +1,4 @@
-package data_structure.searching.rabin_karp;
+package data_structure.search.rabin_karp;
 
 import static org.junit.Assert.*;
 

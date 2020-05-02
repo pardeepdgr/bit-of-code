@@ -1,4 +1,4 @@
-package data_structure.searching.knuth_morris_pratt;
+package data_structure.search.knuth_morris_pratt;
 
 import static org.junit.Assert.*;
 
