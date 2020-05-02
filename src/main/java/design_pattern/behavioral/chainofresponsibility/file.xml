@@ -1,0 +1,36 @@
+<parent Name="CP">
+
+	<dimGroup Name="C">
+		<dim>
+			<Name>"Contract Category"</Name>
+			<dataType>"String"</dataType>
+		</dim>
+		<dim>
+			<Name>"Contract Id"</Name>
+			<dataType>"String"</dataType>
+		</dim>
+	</dimGroup>
+
+	<dimGroup Name="P">
+		<dim>
+			<Name>"Hour"</Name>
+			<dataType>"String"</dataType>
+		</dim>
+		<dim>
+			<Name>"Day"</Name>
+			<dataType>"String"</dataType>
+		</dim>
+		<dim>
+			<Name>"Week"</Name>
+			<dataType>"String"</dataType>
+		</dim>
+	</dimGroup>
+
+	<filters>
+		<filter>Color</filter>
+		<filter>Bin</filter>
+		<filter>Min</filter>
+		<filter>Max</filter>
+	</filters>
+
+</parent>
