@@ -62,7 +62,7 @@ public class DoublyLinkedList {
 		if (node == null || node == head)
 			return;
 		if (node == tail)
-			deleteNodeAtTail();
+			deleteTailNode();
 
 		linkPreviousAndNextNode(node);
 		moveNodeToBegining(node);
