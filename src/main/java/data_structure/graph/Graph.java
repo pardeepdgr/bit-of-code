@@ -126,4 +126,8 @@ public class Graph {
 		}
 	}
 
+	public Vertex[] getAdjacencyList() {
+		return adjList;
+	}
+
 }
