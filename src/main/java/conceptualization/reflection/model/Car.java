@@ -1,28 +1,23 @@
-package java_reflection;
+package conceptualization.reflection.model;
+
 import java.io.Serializable;
 
 public class Car extends Vehicle implements Serializable, Cloneable {
-
 	private static final long serialVersionUID = -1321720391517124036L;
 
 	private String maker;
 	private String model;
-	private String technicalSpecification;
+	private String spec;
 	private int price;
 
 	public Car() {
-		technicalSpecification = "petrol";
-		System.out.println("Car is of petrol version");
+		spec = "petrol";
+		System.out.println("Car is of " + spec + " version");
 	}
 
-	public Car(String disel) {
-		if ("disel".equals(disel)) {
-			technicalSpecification = disel;
-			System.out.println("Car is of disel version");
-		} else {
-			technicalSpecification = "petrol";
-			System.out.println("Car is of petrol version");
-		}
+	public Car(String fuelType) {
+		spec = fuelType;
+		System.out.println("Car is of " + spec + " version");
 	}
 
 	private boolean startIgnition() {
@@ -51,8 +46,8 @@ public class Car extends Vehicle implements Serializable, Cloneable {
 		this.model = model;
 	}
 
-	public String getTechnicalSpecification() {
-		return technicalSpecification;
+	public String getSpec() {
+		return spec;
 	}
 
 	public int getPrice() {

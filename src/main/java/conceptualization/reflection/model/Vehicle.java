@@ -1,4 +1,4 @@
-package java_reflection;
+package conceptualization.reflection.model;
 
 public class Vehicle implements Moveable {
 
