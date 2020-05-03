@@ -1,8 +1,8 @@
-package problem.design.parkinglot.util;
+package problem.design.parkinglot.sort;
 
 import java.util.Comparator;
 
-import problem.design.parkinglot.Slot;
+import problem.design.parkinglot.model.Slot;
 
 public class SortBySlotNumber implements Comparator<Slot> {
 

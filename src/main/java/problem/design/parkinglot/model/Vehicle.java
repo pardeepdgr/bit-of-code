@@ -1,6 +1,6 @@
-package problem.design.parkinglot;
+package problem.design.parkinglot.model;
 
-import problem.design.parkinglot.util.VehicleType;
+import problem.design.parkinglot.type.VehicleType;
 
 public class Vehicle {
 	private String registrationNumber;

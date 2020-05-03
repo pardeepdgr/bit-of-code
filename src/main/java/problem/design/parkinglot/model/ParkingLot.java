@@ -1,9 +1,10 @@
-package problem.design.parkinglot;
+package problem.design.parkinglot.model;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-import problem.design.parkinglot.util.SortBySlotNumber;
+import problem.design.parkinglot.model.Slot;
+import problem.design.parkinglot.sort.SortBySlotNumber;
 
 public class ParkingLot {
 	private Queue<Slot> twoWheelersParkingSpace;

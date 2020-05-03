@@ -1,4 +1,6 @@
-package problem.design.parkinglot;
+package problem.design.parkinglot.model;
+
+import problem.design.parkinglot.model.Vehicle;
 
 public class Slot {
 	private int slotNumber;

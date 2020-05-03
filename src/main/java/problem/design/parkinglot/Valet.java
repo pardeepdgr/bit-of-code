@@ -4,7 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Queue;
 
-import problem.design.parkinglot.util.VehicleType;
+import problem.design.parkinglot.model.ParkingLot;
+import problem.design.parkinglot.model.Slot;
+import problem.design.parkinglot.model.Vehicle;
+import problem.design.parkinglot.type.VehicleType;
 
 public class Valet {
 
