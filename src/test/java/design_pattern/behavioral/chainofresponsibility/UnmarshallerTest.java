@@ -1,15 +1,14 @@
 package design_pattern.behavioral.chainofresponsibility;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
-import org.junit.Before;
-import org.junit.Test;
-
 import design_pattern.behavioral.chainofresponsibility.bo.Parent;
 import design_pattern.behavioral.chainofresponsibility.handler.DimGroupHandler;
 import design_pattern.behavioral.chainofresponsibility.handler.FiltersHandler;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class UnmarshallerTest {
 
@@ -19,7 +18,7 @@ public class UnmarshallerTest {
 
 	@Before
 	public void setUp() {
-		parent = new Unmarshaller().unmarshall("file.xml");
+		parent = new Unmarshaller().unmarshal("src/test/resources/design_pattern/behavioral/chainofresponsibility/data.xml");
 		chain1 = new DimGroupHandler();
 		chain2 = new FiltersHandler();
 
@@ -27,7 +26,7 @@ public class UnmarshallerTest {
 	}
 
 	@Test
-	public void testParsingOfXML() {
+	public void should_print_chain_of_responsibilities() {
 		print(chain1.load(parent));
 	}
 

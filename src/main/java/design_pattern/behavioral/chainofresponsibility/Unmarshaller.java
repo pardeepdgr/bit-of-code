@@ -11,14 +11,14 @@ import com.thoughtworks.xstream.XStream;
 
 public class Unmarshaller {
 
-	public Parent unmarshall(String fileName) {
+	public Parent unmarshal(String fileName) {
 		File xml = new File(fileName);
 		XStream stream = new XStream();
-		processXStremAnnotations(stream);
+		processXStreamAnnotations(stream);
 		return (Parent) stream.fromXML(xml);
 	}
 	
-	private void processXStremAnnotations(XStream stream) {
+	private void processXStreamAnnotations(XStream stream) {
 		stream.processAnnotations(Dim.class);
 		stream.processAnnotations(DimGroup.class);
 		stream.processAnnotations(Filters.class);

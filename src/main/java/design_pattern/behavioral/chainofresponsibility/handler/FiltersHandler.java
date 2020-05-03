@@ -14,6 +14,7 @@ public class FiltersHandler implements Chained {
 	@Override
 	public Map<String, List<String>> load(Parent parent) {
 		Map<String, List<String>> output = new HashMap<String, List<String>>();
+
 		if (parent.getFilters() != null)
 			output.put("filters", parent.getFilters().getFilter());
 		return output;
