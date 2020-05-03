@@ -1,4 +1,4 @@
-package conceptualization.multiple_inheritance;
+package conceptualization.multiple_inheritance.swim;
 
 public interface Swimmable {
 
