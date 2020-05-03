@@ -7,26 +7,16 @@ import java.io.File;
 import org.junit.Test;
 
 public class CryptographerTest {
-
-	private final String PATH = "D:\\";
-	private final String FILENAME = "CLEAR_CODE";
-	private final String INPUT_EXTENSTION = ".csv";
-	private final String ENCRYPTION_EXTENSTION = ".encrypt";
-	private final String DECRYPTION_EXTENSTION = ".decrypt";
+	private final String DATASET = "src/test/resources/conceptualization/encryption/blowfish/data.csv";
+	private final String ENCRYPTED_DATASET = "src/test/resources/conceptualization/encryption/blowfish/data.encrypt";
+	private final String DECRYPTED_DATASET = "src/test/resources/conceptualization/encryption/blowfish/data.decrypt";
 
 	@Test
-	public void testFileEncryption() {
-		String inputFile = PATH.concat(FILENAME).concat(INPUT_EXTENSTION);
-		String outputFile = PATH.concat(FILENAME).concat(ENCRYPTION_EXTENSTION);
-		Cryptographer.encrypt(inputFile, outputFile);
-		assertTrue(new File(PATH.concat(FILENAME).concat(ENCRYPTION_EXTENSTION)).exists());
-	}
+	public void should_encrypt_and_decrypt_dataset_using_blowfish_algorithm() {
+		Cryptographer.encrypt(DATASET, ENCRYPTED_DATASET);
+		assertTrue(new File(ENCRYPTED_DATASET).exists());
 
-	@Test
-	public void testFileDecryption() {
-		String inputFile = PATH.concat(FILENAME).concat(ENCRYPTION_EXTENSTION);
-		String outputFile = PATH.concat(FILENAME).concat(DECRYPTION_EXTENSTION);
-		Cryptographer.decrypt(inputFile, outputFile);
-		assertTrue(new File(PATH.concat(FILENAME).concat(DECRYPTION_EXTENSTION)).exists());
+		Cryptographer.decrypt(ENCRYPTED_DATASET, DECRYPTED_DATASET);
+		assertTrue(new File(DECRYPTED_DATASET).exists());
 	}
 }
