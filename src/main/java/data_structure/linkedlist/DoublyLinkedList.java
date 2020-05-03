@@ -2,6 +2,10 @@ package data_structure.linkedlist;
 
 import conceptualization.cache.lru.model.Node;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 public class DoublyLinkedList {
 
 	private int size;
@@ -83,6 +87,18 @@ public class DoublyLinkedList {
 		node.setNext(head);
 		head.setPrevious(node);
 		head = node;
+	}
+
+	public ArrayList<Node> toArrayList() {
+		if (head == null)
+			return null;
+		ArrayList<Node> nodes = new ArrayList<>();
+		Node node = head;
+		while (node != null) {
+			nodes.add(node);
+			node = node.getNext();
+		}
+		return nodes;
 	}
 
 	public void print() {

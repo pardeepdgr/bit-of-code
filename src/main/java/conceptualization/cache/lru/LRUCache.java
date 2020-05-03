@@ -3,6 +3,7 @@ package conceptualization.cache.lru;
 import conceptualization.cache.lru.model.Node;
 import data_structure.linkedlist.DoublyLinkedList;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,27 +16,12 @@ public class LRUCache {
 		pageMap = new HashMap<Integer, Node>();
 	}
 
-	public static void main(String[] args) {
-		LRUCache lru = new LRUCache(4);
-		cache(lru, 4);
-		cache(lru, 2);
-		cache(lru, 3);
-		cache(lru, 1);
-		cache(lru, 1);
-		cache(lru, 2);
-		cache(lru, 7);
-		cache(lru, 8);
-		cache(lru, 2);
-		cache(lru, 3);
-	}
-
-	private static void cache(LRUCache cache, int pageNumber) {
+	public void cache(LRUCache cache, int pageNumber) {
 		cache.accessPage(pageNumber);
-		cache.print();
 	}
 
 	private void accessPage(int pageNumber) {
-		Node pageNode = null;
+		Node pageNode;
 		if (pageMap.containsKey(pageNumber)) {
 			pageNode = pageMap.get(pageNumber);
 			pageList.moveNodeToHead(pageNode);
@@ -47,9 +33,8 @@ public class LRUCache {
 		}
 	}
 
-	private void print() {
-		pageList.print();
-		System.out.println();
+	public ArrayList<Node> getPageList() {
+		return pageList.toArrayList();
 	}
 
 }
