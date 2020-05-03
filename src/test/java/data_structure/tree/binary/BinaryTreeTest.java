@@ -49,7 +49,7 @@ public class BinaryTreeTest {
 	}
 
 	@Test
-	public void should_return_null_if_node_exists_in_the_tree() {
+	public void should_return_null_if_node_does_not_exists_in_the_tree() {
 		assertNull(tree.find(1));
 	}
 
