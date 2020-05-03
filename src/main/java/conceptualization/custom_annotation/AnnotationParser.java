@@ -1,5 +1,7 @@
 package conceptualization.custom_annotation;
 
+import conceptualization.custom_annotation.annotation.MultiValueAnnotation;
+
 import java.lang.reflect.Method;
 
 public class AnnotationParser {

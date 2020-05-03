@@ -1,4 +1,4 @@
-package conceptualization.custom_annotation;
+package conceptualization.custom_annotation.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -26,7 +26,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 /* The @Documented Marks the annotation for inclusion in the documentation */
 @Documented
-@interface MultiValueAnnotation {
+public @interface MultiValueAnnotation {
 
 	int auotherID() default -1;
 
