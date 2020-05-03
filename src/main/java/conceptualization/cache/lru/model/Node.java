@@ -1,4 +1,4 @@
-package conceptualization.cache.lru;
+package conceptualization.cache.lru.model;
 
 public class Node {
 

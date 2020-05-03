@@ -1,10 +1,12 @@
 package conceptualization.cache.lru;
 
+import conceptualization.cache.lru.model.Node;
+import data_structure.linkedlist.DoublyLinkedList;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class LRUCache {
-
 	private DoublyLinkedList pageList;
 	private Map<Integer, Node> pageMap;
 
