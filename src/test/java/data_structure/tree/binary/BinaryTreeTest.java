@@ -11,6 +11,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class BinaryTreeTest {
+	private static final String LEVELORDER = "15 8 20 2 11 27 6 10 12 22 30 3 7 14";
 	private static final String PREORDER = "15 8 2 6 3 7 11 10 12 14 20 27 22 30";
 	private static final String INORDER = "2 3 6 7 8 10 11 12 14 15 20 22 27 30";
 	private static final String POSTORDER = "3 7 6 2 10 14 12 11 8 22 30 27 20 15";
@@ -50,6 +51,11 @@ public class BinaryTreeTest {
 	@Test
 	public void should_return_null_if_node_exists_in_the_tree() {
 		assertNull(tree.find(1));
+	}
+
+	@Test
+	public void should_traverse_tree_in_level_order() {
+		assertEquals(getTree(LEVELORDER), tree.levelOrderTraversal());
 	}
 
 	@Test

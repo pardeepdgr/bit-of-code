@@ -57,10 +57,9 @@ public class BinaryTree {
 
 		if (root != null) {
 			queue.offer(root);
+			nodes.add(root);
 			while (!queue.isEmpty()) {
 				node = queue.poll();
-				nodes.add(node);
-				// System.out.print(tempNode.getData() + " ");
 
 				if (node.getLeft() != null) {
 					queue.offer(node.getLeft());
@@ -68,7 +67,7 @@ public class BinaryTree {
 				}
 				if (node.getRight() != null) {
 					queue.offer(node.getRight());
-					nodes.add(node.getLeft());
+					nodes.add(node.getRight());
 				}
 			}
 		}
