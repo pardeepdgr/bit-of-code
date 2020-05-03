@@ -1,4 +1,4 @@
-title My Compiler
+title First Compiler
 :start
 
 echo c - Compile
@@ -19,6 +19,6 @@ goto start
 
 :run
 cls
-java FirstClass
+java EntryPoint
 pause
 exit

@@ -1,6 +1,6 @@
-package conceptualization.my_compiler;
+package conceptualization.first_compiler;
 
-public class FirstClass{
+public class EntryPoint {
 
 	public static void main(String[] args){
 		System.out.println("it works!!!");
