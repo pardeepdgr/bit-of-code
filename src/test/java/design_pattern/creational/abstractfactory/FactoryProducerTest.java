@@ -15,7 +15,7 @@ import design_pattern.creational.abstractfactory.type.Square;
 public class FactoryProducerTest {
 
 	@Test
-	public void testColorProduction() {
+	public void should_produce_colors() {
 		AbstractFactory colorFactory = FactoryProducer.getFactory("color");
 		Assert.assertTrue(colorFactory instanceof ColorFactory);
 
@@ -30,7 +30,7 @@ public class FactoryProducerTest {
 	}
 
 	@Test
-	public void testShapeProduction() {
+	public void should_produce_shapes() {
 		AbstractFactory shapeFactory = FactoryProducer.getFactory("shape");
 		Assert.assertTrue(shapeFactory instanceof ShapeFactory);
 

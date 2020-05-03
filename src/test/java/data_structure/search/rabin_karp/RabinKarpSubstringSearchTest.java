@@ -7,7 +7,7 @@ import org.junit.Test;
 public class RabinKarpSubstringSearchTest {
 
 	@Test
-	public void testStringPatternMatching_WhenPatternMatches() {
+	public void should_return_index_when_given_pattern_matches() {
 		String text = "aabcbcbbabaabaacbbcca";
 		String pattern = "bbc";
 
@@ -16,7 +16,7 @@ public class RabinKarpSubstringSearchTest {
 	}
 
 	@Test
-	public void testStringPatternMatching_WhenPatternDoesntMatch() {
+	public void should_return_invalid_index_when_given_pattern_doesnt_match() {
 		String text = "aabcbcbbabaabaacbbcca";
 		String pattern = "abcd";
 

@@ -7,22 +7,22 @@ public class UsageSpecificationTest {
 	private UsageSpecification spec = new UsageSpecification();;
 
 	@Test
-	public void iterateOverTransientCharSpecs() {
+	public void should_iterate_over_transient_char_specs() {
 		CharacteristicSpecificationIterator derivedIterator = spec
 				.iterator("derived");
 		while (derivedIterator.hasNext())
-			printCharSpec(derivedIterator.next());
+			print(derivedIterator.next());
 	}
 
 	@Test
-	public void iterateOverDerivedCharSpecs() {
+	public void should_iterate_over_derived_char_specs() {
 		CharacteristicSpecificationIterator transientIterator = spec
 				.iterator("transient");
 		while (transientIterator.hasNext())
-			printCharSpec(transientIterator.next());
+			print(transientIterator.next());
 	}
 
-	private void printCharSpec(CharacteristicSpecification charSpec) {
+	private void print(CharacteristicSpecification charSpec) {
 		System.out.println(charSpec.getTransientOrDerived() + " ::: "
 				+ charSpec.getId());
 	}

@@ -9,21 +9,19 @@ import org.junit.Test;
 public class ColumnIntroducerTest {
 
 	@Test
-	public void testNewColumnIntroductionByCharSpec() {
+	public void should_add_new_column_for_char_spec() {
 		CharactersticSpecification charSpec = new CharactersticSpecification();
 		UsageSpecification usageSpec = new UsageSpecification();
 
-		ColumnIntroducer.addColumnForCharSpec("REPORT_TIME", charSpec,
-				usageSpec);
+		ColumnIntroducer.addColumnForCharSpec("REPORT_TIME", charSpec, usageSpec);
 	}
 
 	@Test
-	public void testNewColumnIntroductionByEntitySpec() {
+	public void should_add_new_column_for_entity_spec() {
 		EntitySpecification entitySpec = new EntitySpecification();
 		UsageSpecification usageSpec = new UsageSpecification();
 
-		ColumnIntroducer.addColumnForEntitySpec("CELL_SAC", entitySpec,
-				usageSpec);
+		ColumnIntroducer.addColumnForEntitySpec("CELL_SAC", entitySpec, usageSpec);
 	}
 
 }
