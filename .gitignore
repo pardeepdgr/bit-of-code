@@ -35,3 +35,6 @@ build/
 # Encryption Test Generated Files
 data.encrypt
 data.decrypt
+
+# Compression Test Generated Files
+large_file_to_compress.zip
