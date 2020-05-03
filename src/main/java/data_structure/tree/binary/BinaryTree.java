@@ -10,7 +10,7 @@ import java.util.Stack;
 import data_structure.tree.Node;
 
 public class BinaryTree {
-	private Node root = null;
+	private Node root;
 
 	public BinaryTree(int rootData) {
 		root = new Node(rootData);
@@ -51,9 +51,9 @@ public class BinaryTree {
 	}
 
 	public List<Node> levelOrderTraversal() {
-		Node node = new Node();
-		Queue<Node> queue = new LinkedList<Node>();
-		List<Node> nodes = new ArrayList<Node>();
+		Node node;
+		Queue<Node> queue = new LinkedList<>();
+		List<Node> nodes = new ArrayList<>();
 
 		if (root != null) {
 			queue.offer(root);
@@ -76,8 +76,8 @@ public class BinaryTree {
 	}
 
 	public List<Node> preorderTraversal() {
-		Stack<Node> stack = new Stack<Node>();
-		List<Node> nodes = new ArrayList<Node>();
+		Stack<Node> stack = new Stack<>();
+		List<Node> nodes = new ArrayList<>();
 
 		while (true) {
 			if (root != null) {
@@ -96,8 +96,8 @@ public class BinaryTree {
 	}
 
 	public List<Node> inorderTraversal() {
-		Stack<Node> stack = new Stack<Node>();
-		List<Node> nodes = new ArrayList<Node>();
+		Stack<Node> stack = new Stack<>();
+		List<Node> nodes = new ArrayList<>();
 
 		while (true) {
 			if (root != null) {
@@ -116,8 +116,8 @@ public class BinaryTree {
 	}
 
 	public List<Node> postorderTraversal() {
-		Stack<Node> stack = new Stack<Node>();
-		List<Node> nodes = new ArrayList<Node>();
+		Stack<Node> stack = new Stack<>();
+		List<Node> nodes = new ArrayList<>();
 
 		while (true) {
 			if (root != null) {
@@ -145,10 +145,10 @@ public class BinaryTree {
 	}
 
 	public List<Node> spiralOrderTraversal() {
-		List<Node> nodes = new ArrayList<Node>();
-		Deque<Node> deque = new LinkedList<Node>();
+		List<Node> nodes = new ArrayList<>();
+		Deque<Node> deque = new LinkedList<>();
 
-		Node node = null;
+		Node node;
 		Node separator = null;
 		deque.offer(separator);
 		deque.offerFirst(root);
