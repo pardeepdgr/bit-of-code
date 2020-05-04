@@ -18,16 +18,7 @@ package data_structure.sort.insertion;
  */
 public class InsertionSort {
 
-	public static void main(String args[]) {
-		int[] dataSet = { 43, 21, 89, 67, 87, 5, 40, 100, 87, 72, 89, 2, 50 };
-		InsertionSort algo = new InsertionSort();
-
-		printDataSet(dataSet, "Unsorted");
-		algo.insertionSort(dataSet);
-		printDataSet(dataSet, "Sorted");
-	}
-
-	private void insertionSort(int[] dataSet) {
+	public static int[] sort(int[] dataSet) {
 		int high = dataSet.length - 1;
 
 		for (int low = 1; low <= high; low++) {
@@ -37,9 +28,10 @@ public class InsertionSort {
 				}
 			}
 		}
+		return dataSet;
 	}
 
-	private void swap(int[] dataSet, int left, int right) {
+	private static void swap(int[] dataSet, int left, int right) {
 		if (left != right) {
 			dataSet[left] = dataSet[left] + dataSet[right];
 			dataSet[right] = dataSet[left] - dataSet[right];
@@ -47,10 +39,4 @@ public class InsertionSort {
 		}
 	}
 
-	private static void printDataSet(int[] dataSet, String status) {
-		System.out.print(status + " Data Set: ");
-		for (int element : dataSet)
-			System.out.print(element + " ");
-		System.out.println();
-	}
 }
