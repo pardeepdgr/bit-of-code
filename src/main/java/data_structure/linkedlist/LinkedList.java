@@ -1,5 +1,7 @@
 package data_structure.linkedlist;
 
+import data_structure.linkedlist.node.Node;
+
 public class LinkedList<T> {
 
 	private Node<T> head;
@@ -29,11 +31,10 @@ public class LinkedList<T> {
 
 		if (head == null) {
 			head = nextNode;
-			tail = nextNode;
 		} else {
 			tail.setNext(nextNode);
-			tail = nextNode;
 		}
+		tail = nextNode;
 		size++;
 	}
 
@@ -86,7 +87,6 @@ public class LinkedList<T> {
 		System.out.println("null");
 	}
 
-	/*********** Utility Methods ***********/
 
 	public Node<T> getNthNodeFromEnd(int position) {
 		Node<T> firstPointer = head;

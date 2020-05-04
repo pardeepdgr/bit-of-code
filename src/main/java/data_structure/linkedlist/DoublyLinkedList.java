@@ -3,8 +3,6 @@ package data_structure.linkedlist;
 import conceptualization.cache.lru.model.Node;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 public class DoublyLinkedList {
 

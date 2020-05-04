@@ -1,9 +1,9 @@
-package data_structure.linkedlist;
+package data_structure.linkedlist.node;
 
 public class Node<T> implements Comparable<T> {
 
 	T data;
-	Node<T> next;
+	public Node<T> next;
 
 	public T getData() {
 		return data;
