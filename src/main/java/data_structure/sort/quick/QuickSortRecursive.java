@@ -23,13 +23,13 @@ public class QuickSortRecursive {
 		printDataSet(dataSet, "Sorted");
 	}
 
-	private void sort(int[] dataSet) {
+	public static void sort(int[] dataSet) {
 		if (dataSet == null || dataSet.length == 0)
 			return;
 		quickSort(dataSet, 0, dataSet.length - 1);
 	}
 
-	private void quickSort(int[] dataSet, int low, int high) {
+	private static void quickSort(int[] dataSet, int low, int high) {
 		int left = low;
 		int right = high;
 		int pivotValue = dataSet[low + (high - low) / 2];
@@ -58,7 +58,7 @@ public class QuickSortRecursive {
 		}
 	}
 
-	private void swap(int[] dataSet, int left, int right) {
+	private static void swap(int[] dataSet, int left, int right) {
 		if (left != right) {
 			dataSet[left] = dataSet[left] + dataSet[right];
 			dataSet[right] = dataSet[left] - dataSet[right];

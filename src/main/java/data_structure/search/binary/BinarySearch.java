@@ -1,24 +1,23 @@
 package data_structure.search.binary;
 
+import data_structure.sort.quick.QuickSortRecursive;
+
 /**
- * Binary search has O(logn) Runtime complexity
+ * Binary Search has O(logn) Runtime complexity.
+ *
+ * Binary Search doesn't return index of found element as dataset is already sorted and not in original form.
  */
 public class BinarySearch {
 
-	public static void main(String[] args) {
-		int[] dataSet = { 10, 78, 87, 14, 25, 4, 92, 72, 89, 1 };
-		sortDataSet(dataSet);
-		int index = binarySearch(dataSet, 0, dataSet.length - 1, 100);
-		printResult(index);
+	public static boolean search(int[] dataSet, int elementToSearch) {
+		QuickSortRecursive.sort(dataSet);
+
+		int index = binarySearch(dataSet, 0, dataSet.length - 1, elementToSearch);
+
+		return index > -1;
 	}
 
-	private static void sortDataSet(int[] dataSet) {
-		QuickSort algo = new QuickSort();
-		algo.sort(dataSet);
-	}
-
-	private static int binarySearch(int[] dataSet, int low, int high,
-			int element) {
+	private static int binarySearch(int[] dataSet, int low, int high, int element) {
 		while (low < high) {
 			int median = low + (high - low) / 2;
 			if (dataSet[median] > element)
@@ -32,13 +31,6 @@ public class BinarySearch {
 			return low;
 
 		return -1;
-	}
-
-	private static void printResult(int index) {
-		if (index >= 0)
-			System.out.println("Element is fount at " + index + "th position.");
-		else
-			System.out.println("Element not found.");
 	}
 
 }
