@@ -1,6 +1,6 @@
 package data_structure.trie;
 
-import java.util.Map.Entry;
+import data_structure.trie.node.TrieNode;
 
 public class Trie {
 	private final TrieNode root;
