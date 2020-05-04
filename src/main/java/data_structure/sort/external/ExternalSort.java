@@ -1,5 +1,7 @@
 package data_structure.sort.external;
 
+import data_structure.sort.external.file.BufferedFile;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.EOFException;
