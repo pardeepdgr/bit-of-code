@@ -1,17 +1,21 @@
 package data_structure.graph;
 
+import data_structure.graph.vertex.Neighbor;
+import data_structure.graph.vertex.Vertex;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Graph {
-	Scanner scan;
-	Vertex[] adjList;
-	Boolean isDirected;
+public class GraphUsingAdjacencyList {
+	private Scanner scan;
+	private Vertex[] adjList;
+	private Boolean isDirected;
 
-	public Graph(String filename) {
+	public GraphUsingAdjacencyList(String filename, boolean isDirected) {
+		this.isDirected = isDirected;
 		try {
 			scan = new Scanner(new File(filename));
 		} catch (FileNotFoundException e) {
@@ -21,7 +25,6 @@ public class Graph {
 	}
 
 	private void createGraph() {
-		isDirected = "directed".equals(scan.next());
 		adjList = new Vertex[scan.nextInt()];
 		readVertices();
 		readEdges();
@@ -49,16 +52,6 @@ public class Graph {
 			if (adjList[i].getName().equals(name))
 				return i;
 		return -1;
-	}
-
-	public void print() {
-		for (int i = 0; i < adjList.length; i++) {
-			System.out.print(adjList[i].getName());
-			for (Neighbor nbr = adjList[i].getNeighbor(); nbr != null; nbr = nbr.getNext()) {
-				System.out.print(" --> " + adjList[nbr.getVertexNumber()].getName());
-			}
-			System.out.println();
-		}
 	}
 
 	/*
@@ -130,4 +123,13 @@ public class Graph {
 		return adjList;
 	}
 
+	public void print() {
+		for (int i = 0; i < adjList.length; i++) {
+			System.out.print(adjList[i].getName());
+			for (Neighbor nbr = adjList[i].getNeighbor(); nbr != null; nbr = nbr.getNext()) {
+				System.out.print(" --> " + adjList[nbr.getVertexNumber()].getName());
+			}
+			System.out.println();
+		}
+	}
 }

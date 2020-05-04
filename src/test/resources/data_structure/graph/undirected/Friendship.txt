@@ -1,4 +1,3 @@
-undirected
 10
 Sara
 Sam
@@ -16,5 +15,6 @@ Sam Sean
 Sam Mira
 Mira Jane
 Jane Maria
+Jane Rahul
 Rahul Sapna
 Sapna Rohit

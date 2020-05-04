@@ -1,4 +1,8 @@
-package data_structure.graph;
+package data_structure.graph.sort;
+
+import data_structure.graph.GraphUsingAdjacencyList;
+import data_structure.graph.vertex.Neighbor;
+import data_structure.graph.vertex.Vertex;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -11,7 +15,7 @@ public class TopologicalSort {
 
 	private Vertex[] adjList;
 
-	public void sort(Graph graph) {
+	public void sort(GraphUsingAdjacencyList graph) {
 		adjList = graph.getAdjacencyList();
 		Deque<Vertex> stack = new ArrayDeque<Vertex>();
 		boolean[] visited = new boolean[adjList.length];

@@ -1,8 +1,8 @@
-package data_structure.graph;
+package data_structure.graph.vertex;
 
 /**
- * Degree of a vertex is the number of edges incident on it
- * Max. number of edges could be n*(n-1) or (n*(n-1))/2 in directed and undirected graphs respectively.
+ * Degree of a vertex is the number of edges incident on it.
+ * Max. number of edges could be n*(n-1) in directed and (n*(n-1))/2 in undirected graphs.
  */
 public class Vertex {
 
