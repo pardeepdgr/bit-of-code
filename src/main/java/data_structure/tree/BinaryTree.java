@@ -1,4 +1,4 @@
-package data_structure.tree.binary;
+package data_structure.tree;
 
 import java.util.ArrayList;
 import java.util.Deque;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
-import data_structure.tree.Node;
+import data_structure.tree.node.Node;
 
 public class BinaryTree {
 	private Node root;

@@ -1,6 +1,7 @@
 package data_structure.tree.bst;
 
-import data_structure.tree.Node;
+import data_structure.tree.BinarySearchTree;
+import data_structure.tree.node.Node;
 import org.junit.Before;
 import org.junit.Test;
 

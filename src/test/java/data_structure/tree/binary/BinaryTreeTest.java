@@ -1,8 +1,9 @@
 package data_structure.tree.binary;
 
-import data_structure.tree.Node;
+import data_structure.tree.BinarySearchTree;
+import data_structure.tree.BinaryTree;
+import data_structure.tree.node.Node;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -90,7 +91,7 @@ public class BinaryTreeTest {
 
 	@Test
 	public void should_return_true_if_tree_is_bst() {
-		assertTrue(Trees.isBinarySearchTree(tree.getRoot()));
+		assertTrue(BinarySearchTree.isBinarySearchTree(tree.getRoot()));
 	}
 
 	private List<Node> getTree(String traversalOrder) {

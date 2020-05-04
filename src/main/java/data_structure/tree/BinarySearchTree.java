@@ -1,10 +1,8 @@
-package data_structure.tree.bst;
+package data_structure.tree;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
-import data_structure.tree.Node;
+import data_structure.tree.node.Node;
 
 public class BinarySearchTree {
 	private Node root = null;
@@ -172,6 +170,27 @@ public class BinarySearchTree {
 			}
 		}
 		return nodes;
+	}
+
+	public static boolean isBinarySearchTree(Node root) {
+		int current;
+		int previous = Integer.MIN_VALUE;
+		Deque<Node> stack = new LinkedList<Node>();
+
+		do {
+			if (root != null) {
+				stack.addFirst(root);
+				root = root.getLeft();
+			} else {
+				root = stack.pollFirst();
+				current = root.getData();
+				if (current < previous)
+					return false;
+				previous = current;
+				root = root.getRight();
+			}
+		} while (stack.isEmpty());
+		return true;
 	}
 
 	public class NodeNotFoundException extends RuntimeException {
