@@ -1,4 +1,4 @@
-package data_structure.binary_heap;
+package data_structure.binary_heap.type;
 
 public enum HeapType {
 

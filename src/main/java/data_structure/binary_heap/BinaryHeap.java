@@ -1,5 +1,7 @@
 package data_structure.binary_heap;
 
+import data_structure.binary_heap.type.HeapType;
+
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
