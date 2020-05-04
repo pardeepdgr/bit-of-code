@@ -15,22 +15,14 @@ package data_structure.sort.merge;
  */
 public class MergeSort {
 
-	public static void main(String args[]) {
-		int[] dataSet = { 43, 21, 67, 5, 87, 40, 100, 87, 72, 89, 2, 50 };
-		MergeSort algo = new MergeSort();
-
-		printDataSet(dataSet, "Unsorted");
-		algo.sort(dataSet);
-		printDataSet(dataSet, "Sorted");
-	}
-
-	private void sort(int[] dataSet) {
+	public static int[] sort(int[] dataSet) {
 		if (dataSet == null || dataSet.length == 0)
-			return;
+			return null;
 		mergeSort(dataSet, 0, dataSet.length - 1);
+		return dataSet;
 	}
 
-	private void mergeSort(int[] dataSet, int low, int high) {
+	private static void mergeSort(int[] dataSet, int low, int high) {
 		if (low < high) {
 			int middle = low + (high - low) / 2;
 			mergeSort(dataSet, low, middle);
@@ -39,7 +31,7 @@ public class MergeSort {
 		}
 	}
 
-	private void merge(int[] dataSet, int low, int middle, int high) {
+	private static void merge(int[] dataSet, int low, int middle, int high) {
 		int left = low;
 		int start = low;
 		int pin = middle + 1;
@@ -55,7 +47,7 @@ public class MergeSort {
 			dataSet[start++] = duplicateDataSet[left++];
 	}
 
-	private int[] getDuplicateDataSet(int[] dataSet) {
+	private static int[] getDuplicateDataSet(int[] dataSet) {
 		int[] duplicateDataSet = new int[dataSet.length];
 
 		for (int index = 0; index < dataSet.length; index++)
@@ -63,10 +55,4 @@ public class MergeSort {
 		return duplicateDataSet;
 	}
 
-	private static void printDataSet(int[] dataSet, String status) {
-		System.out.print(status + " Data Set: ");
-		for (int element : dataSet)
-			System.out.print(element + " ");
-		System.out.println();
-	}
 }
