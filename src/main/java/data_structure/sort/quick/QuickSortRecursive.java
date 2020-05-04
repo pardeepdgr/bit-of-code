@@ -14,19 +14,11 @@ package data_structure.sort.quick;
  */
 public class QuickSortRecursive {
 
-	public static void main(String args[]) {
-		int[] dataSet = { 43, 21, 67, 5, 87, 40, 100, 87, 72, 89, 2, 50 };
-		QuickSortRecursive algo = new QuickSortRecursive();
-
-		printDataSet(dataSet, "Unsorted");
-		algo.sort(dataSet);
-		printDataSet(dataSet, "Sorted");
-	}
-
-	public static void sort(int[] dataSet) {
+	public static int[] sort(int[] dataSet) {
 		if (dataSet == null || dataSet.length == 0)
-			return;
+			return null;
 		quickSort(dataSet, 0, dataSet.length - 1);
+		return dataSet;
 	}
 
 	private static void quickSort(int[] dataSet, int low, int high) {
@@ -66,10 +58,4 @@ public class QuickSortRecursive {
 		}
 	}
 
-	private static void printDataSet(int[] dataSet, String status) {
-		System.out.print(status + " Data Set: ");
-		for (int element : dataSet)
-			System.out.print(element + " ");
-		System.out.println();
-	}
 }

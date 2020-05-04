@@ -14,18 +14,9 @@ package data_structure.sort.quick;
  */
 public class QuickSortIterative {
 
-	public static void main(String[] args) {
-		int[] dataSet = { 43, 21, 67, 5, 87, 40, 100, 87, 72, 89, 2, 50 };
-		QuickSortIterative algo = new QuickSortIterative();
-
-		printDataSet(dataSet, "Unsorted");
-		algo.quickSort(dataSet);
-		printDataSet(dataSet, "Sorted");
-	}
-
-	private void quickSort(int[] dataSet) {
+	public static int[] sort(int[] dataSet) {
 		if (dataSet == null || dataSet.length == 0)
-			return;
+			return null;
 
 		int low = 0;
 		int high = dataSet.length - 1;
@@ -50,9 +41,10 @@ public class QuickSortIterative {
 				stack[++top] = high;
 			}
 		}
+		return dataSet;
 	}
 
-	private int getPivotAndDoShuffle(int[] dataSet, int low, int high) {
+	private static int getPivotAndDoShuffle(int[] dataSet, int low, int high) {
 		int pivotValue = dataSet[high];
 		int lower = (low - 1);
 
@@ -66,7 +58,7 @@ public class QuickSortIterative {
 		return lower + 1;
 	}
 
-	private void swap(int[] dataSet, int left, int right) {
+	private static void swap(int[] dataSet, int left, int right) {
 		if (left != right) {
 			dataSet[left] = dataSet[left] + dataSet[right];
 			dataSet[right] = dataSet[left] - dataSet[right];
@@ -74,10 +66,4 @@ public class QuickSortIterative {
 		}
 	}
 
-	private static void printDataSet(int[] dataSet, String status) {
-		System.out.print(status + " Data Set: ");
-		for (int element : dataSet)
-			System.out.print(element + " ");
-		System.out.println();
-	}
 }
