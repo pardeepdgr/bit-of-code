@@ -26,10 +26,15 @@ $RECYCLE.BIN/
 .VolumeIcon.icns
 .DS_Store
 .idea
+.gradle
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Build directories
+out/
+build/
+
+# Encryption Test Generated Files
+data.encrypt
+data.decrypt
+
+# Compression Test Generated Files
+large_file_to_compress.zip
